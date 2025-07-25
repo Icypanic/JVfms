@@ -1,17 +1,10 @@
 import React from 'react';
 
-export default function UnitStatusCard({ unit, status }) {
-  const statusColors = {
-    "Available": "bg-green-600",
-    "Responding": "bg-yellow-500",
-    "On Scene": "bg-red-600",
-    "Unavailable": "bg-gray-500"
-  };
-
+export default function Header() {
   return (
-    <div className={`rounded-xl p-4 text-white shadow-md ${statusColors[status] || 'bg-gray-700'}`}>
-      <h2 className="text-lg font-bold">{unit}</h2>
-      <p className="text-sm">{status}</p>
-    </div>
+    <header className="w-full bg-black text-white flex items-center justify-between px-6 py-4 shadow-md">
+      <div className="text-2xl font-bold">JYFMS Dashboard</div>
+      <div className="text-sm text-gray-300">Player: Logan</div>
+    </header>
   );
 }
